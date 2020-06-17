@@ -166,6 +166,7 @@
     <Compile Include="Helpers\DataRowViewToViewModel.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewModel\RolViewModel.cs" />
     <Compile Include="ViewModel\SpecialityViewModel.cs" />
     <Compile Include="ViewModel\UserViewModel.cs" />
     <EmbeddedResource Include="Forms_Auth\FForgotPassword.resx">

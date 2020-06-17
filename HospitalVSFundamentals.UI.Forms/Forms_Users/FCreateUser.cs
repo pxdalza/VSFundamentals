@@ -9,12 +9,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using HospitalVSFundamentals.UI.Forms.Data;
+using HospitalVSFundamentals.UI.Forms.ViewModel;
 
 namespace HospitalVSFundamentals.UI.Forms.Forms_Users
 {
     public partial class FCreateUser : Form
     {
         public FUsersPanel frmusers = new FUsersPanel();
+        protected BD_HospitalVSFundamentalsEntities context = new BD_HospitalVSFundamentalsEntities();
 
 
         public FCreateUser()
@@ -83,6 +86,61 @@ namespace HospitalVSFundamentals.UI.Forms.Forms_Users
             cmbStatus.DataSource = new BindingSource(estados, null);
             cmbStatus.DisplayMember = "Key";
             cmbStatus.ValueMember = "Value";
+
+            cmbRol.DataSource = context.Roles.Select(x => new RolViewModel {
+                Id = x.User_Role_Id,
+                Nombre = x.ShortName
+            }).ToList();
+
+            cmbRol.DisplayMember = "Nombre";
+            cmbRol.ValueMember = "Id";
+
+        }
+
+        private void cmbRol_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            //var rol = ((KeyValuePair<string, string>)cmbRol.SelectedItem).Value;
+
+            if (cmbRol.Text == "DOC" || cmbRol.Text == "ENF")
+            {
+
+                lblCMP.Visible = true;
+                lblEspecialidad.Visible = true;
+                txtCMP.Visible = true;
+                cmbEspecialidad.Visible = true;
+
+                lblPoliza.Visible = false;
+                lblTipoSangre.Visible = false;
+                txtPoliza.Visible = false;
+                cmbTipoSangre.Visible = false;
+
+            }
+            else if (cmbRol.Text == "PCT")
+            {
+
+                lblPoliza.Visible = true;
+                lblTipoSangre.Visible = true;
+                txtPoliza.Visible = true;
+                cmbTipoSangre.Visible = true;
+
+                lblCMP.Visible = false;
+                lblEspecialidad.Visible = false;
+                txtCMP.Visible = false;
+                cmbEspecialidad.Visible = false;
+            }
+            else {
+
+                lblCMP.Visible = false;
+                lblEspecialidad.Visible = false;
+                txtCMP.Visible = false;
+                cmbEspecialidad.Visible = false;
+
+                lblPoliza.Visible = false;
+                lblTipoSangre.Visible = false;
+                txtPoliza.Visible = false;
+                cmbTipoSangre.Visible = false;
+
+            }
 
         }
     }

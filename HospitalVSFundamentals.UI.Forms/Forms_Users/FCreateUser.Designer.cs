@@ -49,6 +49,16 @@
             this.dtpBirthday = new System.Windows.Forms.DateTimePicker();
             this.cmbStatus = new System.Windows.Forms.ComboBox();
             this.cmbGener = new System.Windows.Forms.ComboBox();
+            this.cmbRol = new System.Windows.Forms.ComboBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.txtCMP = new System.Windows.Forms.TextBox();
+            this.lblCMP = new System.Windows.Forms.Label();
+            this.txtPoliza = new System.Windows.Forms.TextBox();
+            this.lblPoliza = new System.Windows.Forms.Label();
+            this.cmbEspecialidad = new System.Windows.Forms.ComboBox();
+            this.lblEspecialidad = new System.Windows.Forms.Label();
+            this.cmbTipoSangre = new System.Windows.Forms.ComboBox();
+            this.lblTipoSangre = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -69,7 +79,7 @@
             // 
             // txtLastName
             // 
-            this.txtLastName.Location = new System.Drawing.Point(140, 52);
+            this.txtLastName.Location = new System.Drawing.Point(402, 26);
             this.txtLastName.Name = "txtLastName";
             this.txtLastName.Size = new System.Drawing.Size(100, 20);
             this.txtLastName.TabIndex = 3;
@@ -77,7 +87,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(12, 55);
+            this.label2.Location = new System.Drawing.Point(274, 29);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(47, 13);
             this.label2.TabIndex = 2;
@@ -85,7 +95,7 @@
             // 
             // txtUsername
             // 
-            this.txtUsername.Location = new System.Drawing.Point(140, 78);
+            this.txtUsername.Location = new System.Drawing.Point(702, 26);
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(100, 20);
             this.txtUsername.TabIndex = 5;
@@ -93,7 +103,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(12, 81);
+            this.label3.Location = new System.Drawing.Point(574, 29);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(58, 13);
             this.label3.TabIndex = 4;
@@ -101,7 +111,7 @@
             // 
             // txtEmail
             // 
-            this.txtEmail.Location = new System.Drawing.Point(140, 104);
+            this.txtEmail.Location = new System.Drawing.Point(140, 61);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(100, 20);
             this.txtEmail.TabIndex = 7;
@@ -109,7 +119,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(12, 107);
+            this.label4.Location = new System.Drawing.Point(12, 64);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(35, 13);
             this.label4.TabIndex = 6;
@@ -117,7 +127,7 @@
             // 
             // txtPassword
             // 
-            this.txtPassword.Location = new System.Drawing.Point(140, 130);
+            this.txtPassword.Location = new System.Drawing.Point(403, 132);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '*';
             this.txtPassword.Size = new System.Drawing.Size(100, 20);
@@ -126,7 +136,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(12, 133);
+            this.label5.Location = new System.Drawing.Point(275, 135);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(66, 13);
             this.label5.TabIndex = 8;
@@ -134,7 +144,7 @@
             // 
             // txtTelefono
             // 
-            this.txtTelefono.Location = new System.Drawing.Point(140, 156);
+            this.txtTelefono.Location = new System.Drawing.Point(402, 61);
             this.txtTelefono.MaxLength = 9;
             this.txtTelefono.Name = "txtTelefono";
             this.txtTelefono.Size = new System.Drawing.Size(100, 20);
@@ -143,7 +153,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(12, 159);
+            this.label6.Location = new System.Drawing.Point(274, 64);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(52, 13);
             this.label6.TabIndex = 10;
@@ -151,7 +161,7 @@
             // 
             // txtDNI
             // 
-            this.txtDNI.Location = new System.Drawing.Point(140, 182);
+            this.txtDNI.Location = new System.Drawing.Point(702, 64);
             this.txtDNI.MaxLength = 8;
             this.txtDNI.Name = "txtDNI";
             this.txtDNI.Size = new System.Drawing.Size(100, 20);
@@ -160,7 +170,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(12, 185);
+            this.label7.Location = new System.Drawing.Point(574, 67);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(29, 13);
             this.label7.TabIndex = 12;
@@ -169,7 +179,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(12, 211);
+            this.label8.Location = new System.Drawing.Point(11, 98);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(111, 13);
             this.label8.TabIndex = 14;
@@ -178,7 +188,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(12, 237);
+            this.label9.Location = new System.Drawing.Point(275, 99);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(43, 13);
             this.label9.TabIndex = 16;
@@ -187,7 +197,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(12, 263);
+            this.label10.Location = new System.Drawing.Point(575, 99);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(45, 13);
             this.label10.TabIndex = 18;
@@ -195,9 +205,9 @@
             // 
             // btnButton
             // 
-            this.btnButton.Location = new System.Drawing.Point(164, 319);
+            this.btnButton.Location = new System.Drawing.Point(200, 233);
             this.btnButton.Name = "btnButton";
-            this.btnButton.Size = new System.Drawing.Size(75, 23);
+            this.btnButton.Size = new System.Drawing.Size(457, 61);
             this.btnButton.TabIndex = 20;
             this.btnButton.Text = "Guardar";
             this.btnButton.UseVisualStyleBackColor = true;
@@ -205,34 +215,139 @@
             // 
             // dtpBirthday
             // 
-            this.dtpBirthday.Location = new System.Drawing.Point(140, 209);
+            this.dtpBirthday.Location = new System.Drawing.Point(139, 96);
             this.dtpBirthday.Name = "dtpBirthday";
             this.dtpBirthday.Size = new System.Drawing.Size(100, 20);
             this.dtpBirthday.TabIndex = 21;
             // 
             // cmbStatus
             // 
+            this.cmbStatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbStatus.FormattingEnabled = true;
-            this.cmbStatus.Location = new System.Drawing.Point(140, 237);
+            this.cmbStatus.Location = new System.Drawing.Point(403, 99);
             this.cmbStatus.Name = "cmbStatus";
             this.cmbStatus.Size = new System.Drawing.Size(99, 21);
             this.cmbStatus.TabIndex = 22;
-            this.cmbStatus.Text = "Seleccione una opcion";
             // 
             // cmbGener
             // 
+            this.cmbGener.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbGener.FormattingEnabled = true;
-            this.cmbGener.Location = new System.Drawing.Point(140, 263);
+            this.cmbGener.Location = new System.Drawing.Point(703, 99);
             this.cmbGener.Name = "cmbGener";
             this.cmbGener.Size = new System.Drawing.Size(99, 21);
             this.cmbGener.TabIndex = 23;
-            this.cmbGener.Text = "Seleccione una opcion";
+            // 
+            // cmbRol
+            // 
+            this.cmbRol.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbRol.FormattingEnabled = true;
+            this.cmbRol.Location = new System.Drawing.Point(139, 130);
+            this.cmbRol.Name = "cmbRol";
+            this.cmbRol.Size = new System.Drawing.Size(99, 21);
+            this.cmbRol.TabIndex = 25;
+            this.cmbRol.SelectedIndexChanged += new System.EventHandler(this.cmbRol_SelectedIndexChanged);
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(14, 131);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(26, 13);
+            this.label11.TabIndex = 24;
+            this.label11.Text = "Rol:";
+            // 
+            // txtCMP
+            // 
+            this.txtCMP.Location = new System.Drawing.Point(703, 135);
+            this.txtCMP.Name = "txtCMP";
+            this.txtCMP.Size = new System.Drawing.Size(100, 20);
+            this.txtCMP.TabIndex = 27;
+            this.txtCMP.Visible = false;
+            // 
+            // lblCMP
+            // 
+            this.lblCMP.AutoSize = true;
+            this.lblCMP.Location = new System.Drawing.Point(575, 138);
+            this.lblCMP.Name = "lblCMP";
+            this.lblCMP.Size = new System.Drawing.Size(33, 13);
+            this.lblCMP.TabIndex = 26;
+            this.lblCMP.Text = "CMP:";
+            this.lblCMP.Visible = false;
+            // 
+            // txtPoliza
+            // 
+            this.txtPoliza.Location = new System.Drawing.Point(703, 135);
+            this.txtPoliza.Name = "txtPoliza";
+            this.txtPoliza.Size = new System.Drawing.Size(100, 20);
+            this.txtPoliza.TabIndex = 29;
+            this.txtPoliza.Visible = false;
+            // 
+            // lblPoliza
+            // 
+            this.lblPoliza.AutoSize = true;
+            this.lblPoliza.Location = new System.Drawing.Point(575, 138);
+            this.lblPoliza.Name = "lblPoliza";
+            this.lblPoliza.Size = new System.Drawing.Size(38, 13);
+            this.lblPoliza.TabIndex = 28;
+            this.lblPoliza.Text = "Poliza:";
+            this.lblPoliza.Visible = false;
+            // 
+            // cmbEspecialidad
+            // 
+            this.cmbEspecialidad.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbEspecialidad.FormattingEnabled = true;
+            this.cmbEspecialidad.Location = new System.Drawing.Point(139, 167);
+            this.cmbEspecialidad.Name = "cmbEspecialidad";
+            this.cmbEspecialidad.Size = new System.Drawing.Size(99, 21);
+            this.cmbEspecialidad.TabIndex = 31;
+            this.cmbEspecialidad.Visible = false;
+            // 
+            // lblEspecialidad
+            // 
+            this.lblEspecialidad.AutoSize = true;
+            this.lblEspecialidad.Location = new System.Drawing.Point(14, 167);
+            this.lblEspecialidad.Name = "lblEspecialidad";
+            this.lblEspecialidad.Size = new System.Drawing.Size(70, 13);
+            this.lblEspecialidad.TabIndex = 30;
+            this.lblEspecialidad.Text = "Especialidad:";
+            this.lblEspecialidad.Visible = false;
+            // 
+            // cmbTipoSangre
+            // 
+            this.cmbTipoSangre.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbTipoSangre.FormattingEnabled = true;
+            this.cmbTipoSangre.Location = new System.Drawing.Point(140, 167);
+            this.cmbTipoSangre.Name = "cmbTipoSangre";
+            this.cmbTipoSangre.Size = new System.Drawing.Size(99, 21);
+            this.cmbTipoSangre.TabIndex = 33;
+            this.cmbTipoSangre.Visible = false;
+            // 
+            // lblTipoSangre
+            // 
+            this.lblTipoSangre.AutoSize = true;
+            this.lblTipoSangre.Location = new System.Drawing.Point(11, 167);
+            this.lblTipoSangre.Name = "lblTipoSangre";
+            this.lblTipoSangre.Size = new System.Drawing.Size(68, 13);
+            this.lblTipoSangre.TabIndex = 32;
+            this.lblTipoSangre.Text = "Tipo Sangre:";
+            this.lblTipoSangre.Visible = false;
             // 
             // FCreateUser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(261, 367);
+            this.ClientSize = new System.Drawing.Size(839, 307);
+            this.Controls.Add(this.cmbTipoSangre);
+            this.Controls.Add(this.lblTipoSangre);
+            this.Controls.Add(this.cmbEspecialidad);
+            this.Controls.Add(this.lblEspecialidad);
+            this.Controls.Add(this.txtPoliza);
+            this.Controls.Add(this.lblPoliza);
+            this.Controls.Add(this.txtCMP);
+            this.Controls.Add(this.lblCMP);
+            this.Controls.Add(this.cmbRol);
+            this.Controls.Add(this.label11);
             this.Controls.Add(this.cmbGener);
             this.Controls.Add(this.cmbStatus);
             this.Controls.Add(this.dtpBirthday);
@@ -285,6 +400,16 @@
         private System.Windows.Forms.DateTimePicker dtpBirthday;
         private System.Windows.Forms.ComboBox cmbStatus;
         private System.Windows.Forms.ComboBox cmbGener;
+        public System.Windows.Forms.ComboBox cmbRol;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.TextBox txtCMP;
+        private System.Windows.Forms.Label lblCMP;
+        private System.Windows.Forms.TextBox txtPoliza;
+        private System.Windows.Forms.Label lblPoliza;
+        private System.Windows.Forms.ComboBox cmbEspecialidad;
+        private System.Windows.Forms.Label lblEspecialidad;
+        private System.Windows.Forms.ComboBox cmbTipoSangre;
+        private System.Windows.Forms.Label lblTipoSangre;
     }
 }
 
