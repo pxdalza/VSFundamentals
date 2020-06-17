@@ -1,0 +1,11 @@
+C:\Users\adminfoco\source\repos\HospitalVSFundamentals\HospitalVSFundamentals.DL.DALC\bin\Release\HospitalVSFundamentals.DL.DALC.dll
+C:\Users\adminfoco\source\repos\HospitalVSFundamentals\HospitalVSFundamentals.DL.DALC\bin\Release\HospitalVSFundamentals.DL.DALC.pdb
+C:\Users\adminfoco\source\repos\HospitalVSFundamentals\HospitalVSFundamentals.DL.DALC\bin\Release\HospitalVSFundamentals.BL.BE.dll
+C:\Users\adminfoco\source\repos\HospitalVSFundamentals\HospitalVSFundamentals.DL.DALC\bin\Release\HospitalVSFundamentals.FL.Utility.dll
+C:\Users\adminfoco\source\repos\HospitalVSFundamentals\HospitalVSFundamentals.DL.DALC\bin\Release\HospitalVSFundamentals.BL.BE.pdb
+C:\Users\adminfoco\source\repos\HospitalVSFundamentals\HospitalVSFundamentals.DL.DALC\bin\Release\HospitalVSFundamentals.FL.Utility.pdb
+C:\Users\adminfoco\source\repos\HospitalVSFundamentals\HospitalVSFundamentals.DL.DALC\obj\Release\HospitalVSFundamentals.DL.DALC.csprojAssemblyReference.cache
+C:\Users\adminfoco\source\repos\HospitalVSFundamentals\HospitalVSFundamentals.DL.DALC\obj\Release\HospitalVSFundamentals.DL.DALC.csproj.CoreCompileInputs.cache
+C:\Users\adminfoco\source\repos\HospitalVSFundamentals\HospitalVSFundamentals.DL.DALC\obj\Release\HospitalVSFundamentals.DL.DALC.csproj.CopyComplete
+C:\Users\adminfoco\source\repos\HospitalVSFundamentals\HospitalVSFundamentals.DL.DALC\obj\Release\HospitalVSFundamentals.DL.DALC.dll
+C:\Users\adminfoco\source\repos\HospitalVSFundamentals\HospitalVSFundamentals.DL.DALC\obj\Release\HospitalVSFundamentals.DL.DALC.pdb

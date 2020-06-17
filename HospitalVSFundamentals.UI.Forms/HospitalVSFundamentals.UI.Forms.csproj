@@ -1,0 +1,267 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{AC3AED1B-1C66-473C-A32B-47A8DF27BD89}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>HospitalVSFundamentals.UI.Forms</RootNamespace>
+    <AssemblyName>HospitalVSFundamentals.UI.Forms</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Data\BDHospitalVSFundamentals.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BDHospitalVSFundamentals.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\BDHospitalVSFundamentals.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BDHospitalVSFundamentals.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\BDHospitalVSFundamentals.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BDHospitalVSFundamentals.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Data\BloodType.cs">
+      <DependentUpon>BDHospitalVSFundamentals.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Dates.cs">
+      <DependentUpon>BDHospitalVSFundamentals.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Doctor.cs">
+      <DependentUpon>BDHospitalVSFundamentals.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\MedicHistory.cs">
+      <DependentUpon>BDHospitalVSFundamentals.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\MedicHistory_Patient.cs">
+      <DependentUpon>BDHospitalVSFundamentals.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Patients.cs">
+      <DependentUpon>BDHospitalVSFundamentals.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Recipes.cs">
+      <DependentUpon>BDHospitalVSFundamentals.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Recipe_Details.cs">
+      <DependentUpon>BDHospitalVSFundamentals.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Roles.cs">
+      <DependentUpon>BDHospitalVSFundamentals.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Speciality.cs">
+      <DependentUpon>BDHospitalVSFundamentals.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\sysdiagrams.cs">
+      <DependentUpon>BDHospitalVSFundamentals.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Type_Atention.cs">
+      <DependentUpon>BDHospitalVSFundamentals.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Users.cs">
+      <DependentUpon>BDHospitalVSFundamentals.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Forms_Auth\FForgotPassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms_Auth\FForgotPassword.Designer.cs">
+      <DependentUpon>FForgotPassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms_Auth\FLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms_Auth\FLogin.Designer.cs">
+      <DependentUpon>FLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms_Specialities\FrmCreateSpeciality.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms_Specialities\FrmCreateSpeciality.Designer.cs">
+      <DependentUpon>FrmCreateSpeciality.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms_Specialities\Frm_DetailSpeciality.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms_Specialities\Frm_DetailSpeciality.Designer.cs">
+      <DependentUpon>Frm_DetailSpeciality.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms_Specialities\Frm_Speciality.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms_Specialities\Frm_Speciality.Designer.cs">
+      <DependentUpon>Frm_Speciality.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Main\FMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Main\FMain.Designer.cs">
+      <DependentUpon>FMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms_Users\FCreateUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms_Users\FCreateUser.Designer.cs">
+      <DependentUpon>FCreateUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms_Users\FUserDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms_Users\FUserDetails.Designer.cs">
+      <DependentUpon>FUserDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms_Users\FUsersPanel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms_Users\FUsersPanel.Designer.cs">
+      <DependentUpon>FUsersPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Helpers\DataRowViewToViewModel.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewModel\SpecialityViewModel.cs" />
+    <Compile Include="ViewModel\UserViewModel.cs" />
+    <EmbeddedResource Include="Forms_Auth\FForgotPassword.resx">
+      <DependentUpon>FForgotPassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms_Auth\FLogin.resx">
+      <DependentUpon>FLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms_Specialities\FrmCreateSpeciality.resx">
+      <DependentUpon>FrmCreateSpeciality.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms_Specialities\Frm_DetailSpeciality.resx">
+      <DependentUpon>Frm_DetailSpeciality.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms_Specialities\Frm_Speciality.resx">
+      <DependentUpon>Frm_Speciality.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Main\FMain.resx">
+      <DependentUpon>FMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms_Users\FCreateUser.resx">
+      <DependentUpon>FCreateUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms_Users\FUserDetails.resx">
+      <DependentUpon>FUserDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms_Users\FUsersPanel.resx">
+      <DependentUpon>FUsersPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EntityDeploy Include="Data\BDHospitalVSFundamentals.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>BDHospitalVSFundamentals.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Data\BDHospitalVSFundamentals.edmx.diagram">
+      <DependentUpon>BDHospitalVSFundamentals.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\HospitalVSFundamentals.BL.BC\HospitalVSFundamentals.BL.BC.csproj">
+      <Project>{866e4765-7f19-4ba5-b24f-00e7d19fc7ba}</Project>
+      <Name>HospitalVSFundamentals.BL.BC</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\HospitalVSFundamentals.BL.BE\HospitalVSFundamentals.BL.BE.csproj">
+      <Project>{f81a969f-4da8-4003-9507-283f27f039a9}</Project>
+      <Name>HospitalVSFundamentals.BL.BE</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="assets\login\blue_background.jpg" />
+    <Content Include="assets\login\icon_send.png" />
+    <Content Include="assets\login\icon_send_20px.png" />
+    <Content Include="assets\login\icon_users.png" />
+    <Content Include="assets\main\back_main.jpg" />
+    <Content Include="assets\main\icon_user.png" />
+    <Content Include="assets\main\icon_user_24px.png" />
+    <Content Include="assets\users\icon_user_add.png" />
+    <Content Include="assets\users\icon_user_delete.png" />
+    <Content Include="assets\users\icon_user_edit.png" />
+    <Content Include="assets\users\icon_user_info.png" />
+    <Content Include="Data\BDHospitalVSFundamentals.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>BDHospitalVSFundamentals.Context.cs</LastGenOutput>
+      <DependentUpon>BDHospitalVSFundamentals.edmx</DependentUpon>
+    </Content>
+    <Content Include="Data\BDHospitalVSFundamentals.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>BDHospitalVSFundamentals.edmx</DependentUpon>
+      <LastGenOutput>BDHospitalVSFundamentals.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

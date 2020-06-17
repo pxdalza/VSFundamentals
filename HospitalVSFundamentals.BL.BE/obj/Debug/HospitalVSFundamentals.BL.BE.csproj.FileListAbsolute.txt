@@ -1,0 +1,5 @@
+C:\Users\adminfoco\source\repos\HospitalVSFundamentals\HospitalVSFundamentals.BL.BE\bin\Debug\HospitalVSFundamentals.BL.BE.dll
+C:\Users\adminfoco\source\repos\HospitalVSFundamentals\HospitalVSFundamentals.BL.BE\bin\Debug\HospitalVSFundamentals.BL.BE.pdb
+C:\Users\adminfoco\source\repos\HospitalVSFundamentals\HospitalVSFundamentals.BL.BE\obj\Debug\HospitalVSFundamentals.BL.BE.csproj.CoreCompileInputs.cache
+C:\Users\adminfoco\source\repos\HospitalVSFundamentals\HospitalVSFundamentals.BL.BE\obj\Debug\HospitalVSFundamentals.BL.BE.dll
+C:\Users\adminfoco\source\repos\HospitalVSFundamentals\HospitalVSFundamentals.BL.BE\obj\Debug\HospitalVSFundamentals.BL.BE.pdb
