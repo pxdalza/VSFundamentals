@@ -1,0 +1,10 @@
+﻿Para importar un proyecto
+1) Ingresar el siguiente comando -> cd [ruta de la carpeta donde pondras el proyecto]
+2) Pegar la ruta de clonacion del proyecto -> git clone https://github.com/pxdalza/VSFundamentals.git
+3) esperar que se descargue y usar la aplicacion
+
+
+par subir sus actualizaciones por consola de git
+1) git add .
+2) git commit -m "mensaje que cosa realizaron"
+3) git push origin master
