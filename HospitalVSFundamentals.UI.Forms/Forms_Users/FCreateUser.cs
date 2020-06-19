@@ -30,11 +30,11 @@ namespace HospitalVSFundamentals.UI.Forms.Forms_Users
         {
 
             UserBC userBC = new UserBC();
-
+            var guid = Guid.NewGuid();
             try
             {
-                /*
-                 *var user = new UserBE();
+                
+                 var user = new UserBE();
 
                  user.Birthday = Convert.ToDateTime(dtpBirthday.Text);
                  user.DNI = txtDNI.Text;
@@ -46,75 +46,77 @@ namespace HospitalVSFundamentals.UI.Forms.Forms_Users
                  user.PhoneNumber = txtTelefono.Text;
                  user.Status = ((KeyValuePair<string, string>)cmbStatus.SelectedItem).Value;
                  user.username = txtUsername.Text;
-
-                 user.User_Role = 1;
+                user.IdUser = guid.ToString();
+                 user.User_Role = (cmbRol.Text == "ADM") ? 1 : (cmbRol.Text == "DOC") ? 2 : (cmbRol.Text == "PCT") ? 3 : 4;
 
                  var result = userBC.CreateUser(user);
 
                  if (result)
                  {
-                     frmusers.udpateDataGridView();
-                     MessageBox.Show("Se registro satisfactoriamente.");
-                     this.Close();
-                 }
+                    if (cmbRol.Text == "PCT")
+                    {
+                        var idBlood = cmbTipoSangre.SelectedIndex + 1;
+                        var paciente = context.Patients.Add(new Patients
+                        {
+                            UserId = guid,
+                            BloodType = idBlood,
+                            Policy = txtPoliza.Text,
+                            Date_Creation = DateTime.Now,
+                            Date_Update = DateTime.Now,
+                        });
+
+                    }
+                    else if (cmbRol.Text == "DOC" || cmbRol.Text == "ENF")
+                    {
+
+                        var idSpecility = cmbEspecialidad.SelectedIndex + 1;
+
+                        var doc = context.Doctor.Add(new Doctor
+                        {
+                            Userid = guid,
+                            CMP = txtCMP.Text,
+                            SpecialityId = idSpecility
+                        });
+
+                    }
+
+                    context.SaveChanges();
+
+                    frmusers.udpateDataGridView();
+                    MessageBox.Show("Se registro satisfactoriamente.");
+                    this.Close();
+
+                }
                  else
                  {
                      MessageBox.Show("Ocurrio un error vuelva a intentar");
                  }
-                 */
+                 
+                //var birthday = Convert.ToDateTime(dtpBirthday.Text);
+                //var gener = ((KeyValuePair<string, string>)cmbGener.SelectedItem).Value;
+                //var pass = PasswordSC.PasswordEncriptarSHA512(txtPassword.Text);
+                //var status = ((KeyValuePair<string, string>)cmbStatus.SelectedItem).Value;
+                //var guid = Guid.NewGuid();
+                //var role = (cmbRol.Text == "ADM") ? 1 : (cmbRol.Text == "DOC") ? 2 : (cmbRol.Text == "PCT") ? 3 : 4;
 
-                var birthday = Convert.ToDateTime(dtpBirthday.Text);
-                var gener = ((KeyValuePair<string, string>)cmbGener.SelectedItem).Value;
-                var pass = PasswordSC.PasswordEncriptarSHA512(txtPassword.Text);
-                var status = ((KeyValuePair<string, string>)cmbStatus.SelectedItem).Value;
-                var guid = Guid.NewGuid();
-                var role = (cmbRol.Text == "ADM") ? 1 : (cmbRol.Text == "DOC") ? 2 : (cmbRol.Text == "PCT") ? 3 : 4;
+                //var user = context.Users.Add(new Users {
+                //    Name = txtNombre.Text,
+                //    LastName = txtLastName.Text,
+                //    Birthday = birthday,
+                //    DNI = txtDNI.Text,
+                //    Email = txtEmail.Text,
+                //    Gener = gener,
+                //    Password = pass,
+                //    PhoneNumber = txtTelefono.Text,
+                //    Status = status,
+                //    username = txtUsername.Text,
+                //    IdUser = guid,
+                //    User_Role = role,
+                //});
 
-                var user = context.Users.Add(new Users {
-                    Name = txtNombre.Text,
-                    LastName = txtLastName.Text,
-                    Birthday = birthday,
-                    DNI = txtDNI.Text,
-                    Email = txtEmail.Text,
-                    Gener = gener,
-                    Password = pass,
-                    PhoneNumber = txtTelefono.Text,
-                    Status = status,
-                    username = txtUsername.Text,
-                    IdUser = guid,
-                    User_Role = role,
-                });
+                
 
-                if (cmbRol.Text == "PCT")
-                {
-                    var idBlood = cmbTipoSangre.SelectedIndex+1;
-                    var paciente = context.Patients.Add(new Patients {
-                       UserId = user.IdUser,
-                       BloodType = idBlood,
-                       Policy = txtPoliza.Text,
-                       Date_Creation = DateTime.Now,
-                       Date_Update = DateTime.Now,
-                    });
-
-                }
-                else if (cmbRol.Text == "DOC" || cmbRol.Text == "ENF")
-                {
-
-                    var idSpecility = cmbEspecialidad.SelectedIndex+1;
-
-                    var doc = context.Doctor.Add(new Doctor { 
-                        Userid = user.IdUser,
-                        CMP = txtCMP.Text,
-                        SpecialityId = idSpecility
-                    });
-
-                }
-
-                context.SaveChanges();
-
-                frmusers.udpateDataGridView();
-                MessageBox.Show("Se registro satisfactoriamente.");
-                this.Close();
+                
 
             }
             catch (Exception ex)

@@ -37,6 +37,7 @@ namespace HospitalVSFundamentals.DL.DALC
                     SQLHelper.AddParam(ref cmd, "@lastname", ParameterDirection.Input, SqlDbType.VarChar, userBE.LastName);
                     SQLHelper.AddParam(ref cmd, "@email", ParameterDirection.Input, SqlDbType.VarChar, userBE.Email);
                     SQLHelper.AddParam(ref cmd, "@phonenumber", ParameterDirection.Input, SqlDbType.VarChar, userBE.PhoneNumber);
+                    SQLHelper.AddParam(ref cmd, "@userid", ParameterDirection.Input, SqlDbType.VarChar, userBE.IdUser);
 
                     //Encriptar contrasenia
                     var pass = PasswordSC.PasswordEncriptarSHA512(userBE.Password);
