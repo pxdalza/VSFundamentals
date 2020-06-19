@@ -13,4 +13,11 @@ namespace HospitalVSFundamentals.UI.Forms.ViewModel
         public String NombreCorto {get;set; }
 
     }
+
+    public class BloodViewModel
+    {
+        public int Id { get; set; }
+        public String Nombre { get; set; }
+    }
+
 }

@@ -236,6 +236,10 @@
       <Project>{f81a969f-4da8-4003-9507-283f27f039a9}</Project>
       <Name>HospitalVSFundamentals.BL.BE</Name>
     </ProjectReference>
+    <ProjectReference Include="..\HospitalVSFundamentals.FL.Utility\HospitalVSFundamentals.FL.Utility.csproj">
+      <Project>{5632c1c8-cca7-4871-8ea4-11f63d8af7f0}</Project>
+      <Name>HospitalVSFundamentals.FL.Utility</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Content Include="assets\login\blue_background.jpg" />
