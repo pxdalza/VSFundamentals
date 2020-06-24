@@ -13,11 +13,11 @@ using System.Windows.Forms;
 
 namespace HospitalVSFundamentals.UI.Forms
 {
-    public partial class FMain : Form
+    public partial class FMainAdm : Form
     {
         public UserLoginBE ulogin = new UserLoginBE();
 
-        public FMain()
+        public FMainAdm()
         {
             InitializeComponent();
             gbPanel.BackColor = Color.FromArgb(25, Color.Black);
