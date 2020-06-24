@@ -9,6 +9,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using HospitalVSFundamentals.UI.Forms.Form_Main;
+
 
 namespace HospitalVSFundamentals.UI.Forms
 {
@@ -51,18 +53,18 @@ namespace HospitalVSFundamentals.UI.Forms
                     {
                         ////redirigir al main
                         this.Hide();
-                        switch (ulogin.Role.ToString())
+                        switch (ulogin.Role)
                         {
                             case "ADM":
                                 var frmMainAdm = new FMainAdm();
                                 frmMainAdm.ulogin = ulogin;
                                 frmMainAdm.Show(); break;
                             case "MDC":
-                                var frmMainMdc = new FMainAdm();
+                                var frmMainMdc = new FMainMdc();
                                 frmMainMdc.ulogin = ulogin;
                                 frmMainMdc.Show(); break;
                             case "PCN":
-                                var frmMainPcn = new FMainAdm();
+                                var frmMainPcn = new FMainPcn();
                                 frmMainPcn.ulogin = ulogin;
                                 frmMainPcn.Show(); break;
                             default:
