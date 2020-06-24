@@ -22,3 +22,8 @@ select,
 textarea {
     max-width: 280px;
 }
+
+.label-content {
+text-align:center;
+background-color: #ff6a00
+}

@@ -1,0 +1,35 @@
+﻿@model IEnumerable<HospitalVSFundamentals.UI.MVC.ViewModel.DoctorViewModel>
+@{
+    ViewBag.Title = "Doctores";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Doctores</h2>
+
+<table class="table">
+    <tr>
+        <th>@Html.DisplayNameFor(model => model.Id)</th>
+        <th>@Html.DisplayNameFor(model => model.Nombre)</th>
+        <th>@Html.DisplayNameFor(model => model.Apellido)</th>
+        <th>@Html.DisplayNameFor(model => model.CMP)</th>
+        <th>@Html.DisplayNameFor(model => model.Fecha_Nacimiento)</th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>@Html.DisplayNameFor(model => model.Id)</td>
+        <td>@Html.DisplayNameFor(model => model.Nombre)</td>
+        <td>@Html.DisplayNameFor(model => model.Apellido)</td>
+        <td>@Html.DisplayNameFor(model => model.CMP)</td>
+        <td>@Html.DisplayNameFor(model => model.Fecha_Nacimiento)</td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
+            @Html.ActionLink("Details", "Details", new { id = item.Id }) |
+            @Html.ActionLink("Delete", "Delete", new { id = item.Id })
+        </td>
+    </tr>
+}
+
+</table>
+

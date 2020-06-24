@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="6cd9809686ac4724b22be11e09f6af82" Name="Diagram1">
+        <EntityTypeShape EntityType="BD_HospitalVSFundamentalsModel.BloodType" Width="1.5" PointX="6" PointY="1.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="BD_HospitalVSFundamentalsModel.Dates" Width="1.5" PointX="10.5" PointY="4.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="BD_HospitalVSFundamentalsModel.Doctor" Width="1.5" PointX="5.25" PointY="4.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="BD_HospitalVSFundamentalsModel.MedicHistory" Width="1.5" PointX="8.25" PointY="8.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="BD_HospitalVSFundamentalsModel.MedicHistory_Patient" Width="1.5" PointX="10.5" PointY="1.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="BD_HospitalVSFundamentalsModel.Patients" Width="1.5" PointX="8.25" PointY="4.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="BD_HospitalVSFundamentalsModel.Recipe_Details" Width="1.5" PointX="8.25" PointY="12.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="BD_HospitalVSFundamentalsModel.Recipes" Width="1.5" PointX="6" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BD_HospitalVSFundamentalsModel.Roles" Width="1.5" PointX="0.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BD_HospitalVSFundamentalsModel.Speciality" Width="1.5" PointX="3" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BD_HospitalVSFundamentalsModel.sysdiagrams" Width="1.5" PointX="0.75" PointY="9.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="BD_HospitalVSFundamentalsModel.Type_Atention" Width="1.5" PointX="8.25" PointY="0.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="BD_HospitalVSFundamentalsModel.Users" Width="1.5" PointX="3" PointY="3.5" IsExpanded="true" />
+        <AssociationConnector Association="BD_HospitalVSFundamentalsModel.FK_Patients_BloodType" ManuallyRouted="false" />
+        <AssociationConnector Association="BD_HospitalVSFundamentalsModel.FK_Dates_Patients" ManuallyRouted="false" />
+        <AssociationConnector Association="BD_HospitalVSFundamentalsModel.FK_Dates_Type_Atention" ManuallyRouted="false" />
+        <AssociationConnector Association="BD_HospitalVSFundamentalsModel.FK_Doctor_Speciality" ManuallyRouted="false" />
+        <AssociationConnector Association="BD_HospitalVSFundamentalsModel.FK_Doctor_Users" ManuallyRouted="false" />
+        <AssociationConnector Association="BD_HospitalVSFundamentalsModel.FK_MedicHistory_Patient_MedicHistory" ManuallyRouted="false" />
+        <AssociationConnector Association="BD_HospitalVSFundamentalsModel.FK_MedicHistory_Recipes" ManuallyRouted="false" />
+        <AssociationConnector Association="BD_HospitalVSFundamentalsModel.FK_MedicHistory_Patient_Patients" ManuallyRouted="false" />
+        <AssociationConnector Association="BD_HospitalVSFundamentalsModel.FK_Patients_Users" ManuallyRouted="false" />
+        <AssociationConnector Association="BD_HospitalVSFundamentalsModel.FK_Recipe_Details_Recipes" ManuallyRouted="false" />
+        <AssociationConnector Association="BD_HospitalVSFundamentalsModel.FK_Users_Roles" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

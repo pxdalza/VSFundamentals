@@ -45,10 +45,18 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -120,11 +128,87 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\BloodTypesController.cs" />
+    <Compile Include="Controllers\DoctorController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\BDHospitalVSFundamentals.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BDHospitalVSFundamentals.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\BDHospitalVSFundamentals.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BDHospitalVSFundamentals.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\BDHospitalVSFundamentals.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BDHospitalVSFundamentals.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\BloodType.cs">
+      <DependentUpon>BDHospitalVSFundamentals.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Dates.cs">
+      <DependentUpon>BDHospitalVSFundamentals.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Doctor.cs">
+      <DependentUpon>BDHospitalVSFundamentals.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MedicHistory.cs">
+      <DependentUpon>BDHospitalVSFundamentals.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MedicHistory_Patient.cs">
+      <DependentUpon>BDHospitalVSFundamentals.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Patients.cs">
+      <DependentUpon>BDHospitalVSFundamentals.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Recipes.cs">
+      <DependentUpon>BDHospitalVSFundamentals.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Recipe_Details.cs">
+      <DependentUpon>BDHospitalVSFundamentals.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Roles.cs">
+      <DependentUpon>BDHospitalVSFundamentals.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Speciality.cs">
+      <DependentUpon>BDHospitalVSFundamentals.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sp_helpdiagramdefinition_Result.cs">
+      <DependentUpon>BDHospitalVSFundamentals.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sp_helpdiagrams_Result.cs">
+      <DependentUpon>BDHospitalVSFundamentals.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sysdiagrams.cs">
+      <DependentUpon>BDHospitalVSFundamentals.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Type_Atention.cs">
+      <DependentUpon>BDHospitalVSFundamentals.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Users.cs">
+      <DependentUpon>BDHospitalVSFundamentals.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\usp_getuserbyEmail_Result.cs">
+      <DependentUpon>BDHospitalVSFundamentals.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\usp_Get_User_Result.cs">
+      <DependentUpon>BDHospitalVSFundamentals.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\usp_List_User_Result.cs">
+      <DependentUpon>BDHospitalVSFundamentals.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\usp_login_Result.cs">
+      <DependentUpon>BDHospitalVSFundamentals.tt</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewModel\BloodTypeViewModel.cs" />
+    <Compile Include="ViewModel\DoctorViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap-theme.css" />
@@ -135,8 +219,25 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Models\BDHospitalVSFundamentals.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>BDHospitalVSFundamentals.Context.cs</LastGenOutput>
+      <DependentUpon>BDHospitalVSFundamentals.edmx</DependentUpon>
+    </Content>
+    <Content Include="Models\BDHospitalVSFundamentals.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>BDHospitalVSFundamentals.edmx</DependentUpon>
+      <LastGenOutput>BDHospitalVSFundamentals.cs</LastGenOutput>
+    </Content>
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <EntityDeploy Include="Models\BDHospitalVSFundamentals.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>BDHospitalVSFundamentals.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\BDHospitalVSFundamentals.edmx.diagram">
+      <DependentUpon>BDHospitalVSFundamentals.edmx</DependentUpon>
+    </Content>
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
     <Content Include="Scripts\jquery-3.3.1.min.js" />
@@ -162,10 +263,16 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\BloodTypes\Create.cshtml" />
+    <Content Include="Views\BloodTypes\Delete.cshtml" />
+    <Content Include="Views\BloodTypes\Details.cshtml" />
+    <Content Include="Views\BloodTypes\Edit.cshtml" />
+    <Content Include="Views\BloodTypes\Index.cshtml" />
+    <Content Include="Views\Doctor\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
+    <Folder Include="assets\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
@@ -189,6 +296,9 @@
       <Project>{f81a969f-4da8-4003-9507-283f27f039a9}</Project>
       <Name>HospitalVSFundamentals.BL.BE</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

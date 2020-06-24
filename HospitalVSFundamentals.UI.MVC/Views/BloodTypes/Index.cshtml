@@ -1,0 +1,42 @@
+﻿@model IEnumerable<HospitalVSFundamentals.UI.MVC.ViewModel.BloodTypeViewModel>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    String aux = "";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.BloodTypeId }) |
+                @Html.ActionLink("Details", "Details", new { id = item.BloodTypeId }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.BloodTypeId })
+            </td>
+        </tr>
+        aux = aux + item.Name + " - ";
+
+    }
+
+</table>
+@if(true){
+    <p>@aux</p>
+
+}
