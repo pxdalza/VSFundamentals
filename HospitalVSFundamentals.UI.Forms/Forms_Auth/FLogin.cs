@@ -9,6 +9,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using HospitalVSFundamentals.UI.Forms.Form_Main;
+
 
 namespace HospitalVSFundamentals.UI.Forms
 {
@@ -50,14 +52,26 @@ namespace HospitalVSFundamentals.UI.Forms
                     else
                     {
                         ////redirigir al main
-
                         this.Hide();
-                        var frmMain = new FMain();
-                        frmMain.ulogin = ulogin;
-                        frmMain.Show();
-
+                        switch (ulogin.Role)
+                        {
+                            case "ADM":
+                                var frmMainAdm = new FMainAdm();
+                                frmMainAdm.ulogin = ulogin;
+                                frmMainAdm.Show(); break;
+                            case "MDC":
+                                var frmMainMdc = new FMainMdc();
+                                frmMainMdc.ulogin = ulogin;
+                                frmMainMdc.Show(); break;
+                            case "PCN":
+                                var frmMainPcn = new FMainPcn();
+                                frmMainPcn.ulogin = ulogin;
+                                frmMainPcn.Show(); break;
+                            default:
+                                MessageBox.Show("Usuario no tiene rol asignado");
+                                break;
+                        }
                     }
-
 
                 }
 
@@ -67,21 +81,21 @@ namespace HospitalVSFundamentals.UI.Forms
                 MessageBox.Show("Ocurrio un error en el sistema.");
             }
 
-        }
+}
 
-        private void llOlvidoContrasenia_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
+private void llOlvidoContrasenia_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+{
 
-            try
-            {
-                var frmForgotPassword = new FForgotPassword();
-                frmForgotPassword.Show();
-            }
-            catch (Exception)
-            {
-                MessageBox.Show("Ocurrio un error en el sistema.");
-            }
+    try
+    {
+        var frmForgotPassword = new FForgotPassword();
+        frmForgotPassword.Show();
+    }
+    catch (Exception)
+    {
+        MessageBox.Show("Ocurrio un error en el sistema.");
+    }
 
-        }
+}
     }
 }

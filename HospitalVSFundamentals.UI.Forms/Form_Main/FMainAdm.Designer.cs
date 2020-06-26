@@ -1,6 +1,6 @@
 ﻿namespace HospitalVSFundamentals.UI.Forms
 {
-    partial class FMain
+    partial class FMainAdm
     {
         /// <summary>
         /// Required designer variable.
@@ -137,7 +137,7 @@
             this.lblRol.TabIndex = 5;
             this.lblRol.Text = "Rol: ADM";
             // 
-            // FMain
+            // FMainAdm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -149,8 +149,8 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.gbPanel);
-            this.Name = "FMain";
-            this.Text = "FMain";
+            this.Name = "FMainAdm";
+            this.Text = "FMainAdm";
             this.Load += new System.EventHandler(this.FMain_Load);
             this.gbPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
