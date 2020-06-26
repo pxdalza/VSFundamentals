@@ -46,7 +46,7 @@ namespace HospitalVSFundamentals.UI.Forms.Forms_Users
                  user.PhoneNumber = txtTelefono.Text;
                  user.Status = ((KeyValuePair<string, string>)cmbStatus.SelectedItem).Value;
                  user.username = txtUsername.Text;
-                user.IdUser = guid.ToString();
+                    user.IdUser = guid.ToString();
                  user.User_Role = (cmbRol.Text == "ADM") ? 1 : (cmbRol.Text == "DOC") ? 2 : (cmbRol.Text == "PCT") ? 3 : 4;
 
                  var result = userBC.CreateUser(user);
