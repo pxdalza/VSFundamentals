@@ -28,14 +28,11 @@ namespace HospitalVSFundamentals.UI.Forms.Forms_Users
 
         private void btnButton_Click(object sender, EventArgs e)
         {
-
             UserBC userBC = new UserBC();
             var guid = Guid.NewGuid();
             try
             {
-                
                  var user = new UserBE();
-
                  user.Birthday = Convert.ToDateTime(dtpBirthday.Text);
                  user.DNI = txtDNI.Text;
                  user.Email = txtEmail.Text;

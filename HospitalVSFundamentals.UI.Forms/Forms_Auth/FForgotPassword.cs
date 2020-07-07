@@ -79,7 +79,7 @@ namespace HospitalVSFundamentals.UI.Forms
             catch (Exception ex )
             {
 
-                MessageBox.Show("Ocurrio un error en el sistema.");
+                MessageBox.Show("Ocurrio un error en el sistema. " + ex);
             }
 
         }

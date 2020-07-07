@@ -57,9 +57,9 @@
             this.gbPanel.Controls.Add(this.txtUsername);
             this.gbPanel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.gbPanel.Location = new System.Drawing.Point(204, 81);
-            this.gbPanel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbPanel.Margin = new System.Windows.Forms.Padding(4);
             this.gbPanel.Name = "gbPanel";
-            this.gbPanel.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbPanel.Padding = new System.Windows.Forms.Padding(4);
             this.gbPanel.Size = new System.Drawing.Size(968, 512);
             this.gbPanel.TabIndex = 1;
             this.gbPanel.TabStop = false;
@@ -81,7 +81,7 @@
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(440, 23);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(127, 90);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -125,7 +125,7 @@
             // btnIngresar
             // 
             this.btnIngresar.Location = new System.Drawing.Point(371, 336);
-            this.btnIngresar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnIngresar.Margin = new System.Windows.Forms.Padding(4);
             this.btnIngresar.Name = "btnIngresar";
             this.btnIngresar.Size = new System.Drawing.Size(295, 28);
             this.btnIngresar.TabIndex = 9;
@@ -136,7 +136,7 @@
             // txtPassword
             // 
             this.txtPassword.Location = new System.Drawing.Point(371, 250);
-            this.txtPassword.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtPassword.Margin = new System.Windows.Forms.Padding(4);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '*';
             this.txtPassword.Size = new System.Drawing.Size(293, 22);
@@ -145,7 +145,7 @@
             // txtUsername
             // 
             this.txtUsername.Location = new System.Drawing.Point(371, 197);
-            this.txtUsername.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtUsername.Margin = new System.Windows.Forms.Padding(4);
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(293, 22);
             this.txtUsername.TabIndex = 7;
@@ -158,9 +158,10 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(1361, 732);
             this.Controls.Add(this.gbPanel);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FLogin";
             this.Text = "FLogin";
+            this.Load += new System.EventHandler(this.FLogin_Load);
             this.gbPanel.ResumeLayout(false);
             this.gbPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

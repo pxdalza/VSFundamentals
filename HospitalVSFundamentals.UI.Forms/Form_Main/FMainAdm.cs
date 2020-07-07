@@ -1,4 +1,5 @@
 ﻿using HospitalVSFundamentals.BL.BE;
+using HospitalVSFundamentals.UI.Forms.Forms_MedicHistory;
 using HospitalVSFundamentals.UI.Forms.Forms_Specialities;
 using HospitalVSFundamentals.UI.Forms.Forms_Users;
 using System;
@@ -50,5 +51,7 @@ namespace HospitalVSFundamentals.UI.Forms
             var FSpeciality = new Frm_Speciality();
             FSpeciality.Show();
         }
+
+       
     }
 }

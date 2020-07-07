@@ -1,0 +1,141 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="Pacientes" targetNamespace="http://tempuri.org/Pacientes.xsd" xmlns:mstns="http://tempuri.org/Pacientes.xsd" xmlns="http://tempuri.org/Pacientes.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="BD_HospitalVSFundamentalsConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="BD_HospitalVSFundamentalsConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.HospitalVSFundamentals.UI.Forms.Properties.Settings.GlobalReference.Default.BD_HospitalVSFundamentalsConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="DataTable1TableAdapter" GeneratorDataComponentClassName="DataTable1TableAdapter" Name="DataTable1" UserDataComponentName="DataTable1TableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="BD_HospitalVSFundamentalsConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="MethodPaceintes" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="MethodPaceintesReporte" GeneratorSourceName="MethodPaceintes" GetMethodModifier="Public" GetMethodName="MethodPaceintesReporte" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="MethodPaceintesReporte" UserSourceName="MethodPaceintes">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>select	TRIM(U.LastName+', '+U.Name) Paciente
+		,U.DNI
+		,(CASE U.Gener WHEN 'M' THEN 'Masculino'
+					   WHEN 'F' THEN 'Femenino'
+		  END) AS Genero
+		,U.PhoneNumber
+		,Ro.Name, Ro.ShortName
+		,B.Name TipoSangre
+		,MH.Description Historia
+		,MH.Height Talla, MH.Weight Peso
+		,(Select doc.LastName+', '+doc.Name from Users doc
+		inner join Patients pdoc on (doc.IdUser = pdoc.UserId)
+		inner join MedicHistory_Patient mhpdoc on (pdoc.PacienteId = mhpdoc.PatientId)
+		inner join MedicHistory mhdoc on (mhpdoc.MedicHistoryId = mhdoc.MedicHistoryId)
+			where doc.User_Role=2
+			and mhdoc.RecipeId = R.RecipeId) Doctor
+from MedicHistory MH
+inner join Patients P on( MH.PatiendId = P.PacienteId)
+inner join BloodType B on (P.BloodType = B.BloodTypeId)
+inner join Users U on (P.UserId = U.IdUser)
+inner join Roles Ro on (U.User_Role = Ro.User_Role_Id)
+inner join Recipes R on (MH.RecipeId = R.RecipeId)
+Where (U.User_Role=3 or U.User_Role=4)
+</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Paciente" DataSetColumn="Paciente" />
+              <Mapping SourceColumn="DNI" DataSetColumn="DNI" />
+              <Mapping SourceColumn="Genero" DataSetColumn="Genero" />
+              <Mapping SourceColumn="PhoneNumber" DataSetColumn="PhoneNumber" />
+              <Mapping SourceColumn="Name" DataSetColumn="Name" />
+              <Mapping SourceColumn="ShortName" DataSetColumn="ShortName" />
+              <Mapping SourceColumn="TipoSangre" DataSetColumn="TipoSangre" />
+              <Mapping SourceColumn="Historia" DataSetColumn="Historia" />
+              <Mapping SourceColumn="Talla" DataSetColumn="Talla" />
+              <Mapping SourceColumn="Peso" DataSetColumn="Peso" />
+              <Mapping SourceColumn="Doctor" DataSetColumn="Doctor" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="Pacientes" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="Pacientes" msprop:Generator_UserDSName="Pacientes">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="DataTable1" msprop:Generator_TableClassName="DataTable1DataTable" msprop:Generator_TableVarName="tableDataTable1" msprop:Generator_RowChangedName="DataTable1RowChanged" msprop:Generator_TablePropName="DataTable1" msprop:Generator_RowDeletingName="DataTable1RowDeleting" msprop:Generator_RowChangingName="DataTable1RowChanging" msprop:Generator_RowEvHandlerName="DataTable1RowChangeEventHandler" msprop:Generator_RowDeletedName="DataTable1RowDeleted" msprop:Generator_RowClassName="DataTable1Row" msprop:Generator_UserTableName="DataTable1" msprop:Generator_RowEvArgName="DataTable1RowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Paciente" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnPaciente" msprop:Generator_ColumnPropNameInRow="Paciente" msprop:Generator_ColumnPropNameInTable="PacienteColumn" msprop:Generator_UserColumnName="Paciente" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="502" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DNI" msprop:Generator_ColumnVarNameInTable="columnDNI" msprop:Generator_ColumnPropNameInRow="DNI" msprop:Generator_ColumnPropNameInTable="DNIColumn" msprop:Generator_UserColumnName="DNI" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="8" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Genero" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnGenero" msprop:Generator_ColumnPropNameInRow="Genero" msprop:Generator_ColumnPropNameInTable="GeneroColumn" msprop:Generator_UserColumnName="Genero" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="9" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PhoneNumber" msprop:Generator_ColumnVarNameInTable="columnPhoneNumber" msprop:Generator_ColumnPropNameInRow="PhoneNumber" msprop:Generator_ColumnPropNameInTable="PhoneNumberColumn" msprop:Generator_UserColumnName="PhoneNumber" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Name" msprop:Generator_ColumnVarNameInTable="columnName" msprop:Generator_ColumnPropNameInRow="Name" msprop:Generator_ColumnPropNameInTable="NameColumn" msprop:Generator_UserColumnName="Name" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="250" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ShortName" msprop:Generator_ColumnVarNameInTable="columnShortName" msprop:Generator_ColumnPropNameInRow="ShortName" msprop:Generator_ColumnPropNameInTable="ShortNameColumn" msprop:Generator_UserColumnName="ShortName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TipoSangre" msprop:Generator_ColumnVarNameInTable="columnTipoSangre" msprop:Generator_ColumnPropNameInRow="TipoSangre" msprop:Generator_ColumnPropNameInTable="TipoSangreColumn" msprop:Generator_UserColumnName="TipoSangre" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Historia" msprop:Generator_ColumnVarNameInTable="columnHistoria" msprop:Generator_ColumnPropNameInRow="Historia" msprop:Generator_ColumnPropNameInTable="HistoriaColumn" msprop:Generator_UserColumnName="Historia" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Talla" msprop:Generator_ColumnVarNameInTable="columnTalla" msprop:Generator_ColumnPropNameInRow="Talla" msprop:Generator_ColumnPropNameInTable="TallaColumn" msprop:Generator_UserColumnName="Talla" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Peso" msprop:Generator_ColumnVarNameInTable="columnPeso" msprop:Generator_ColumnPropNameInRow="Peso" msprop:Generator_ColumnPropNameInTable="PesoColumn" msprop:Generator_UserColumnName="Peso" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Doctor" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnDoctor" msprop:Generator_ColumnPropNameInRow="Doctor" msprop:Generator_ColumnPropNameInTable="DoctorColumn" msprop:Generator_UserColumnName="Doctor" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="502" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using HospitalVSFundamentals.UI.Forms.Forms_MedicHistory;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -18,7 +19,10 @@ namespace HospitalVSFundamentals.UI.Forms
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new FLogin());
             //Application.Run(new Form1());
-
+            // Application.Run(new Frm_MedicHistory());
+            //  Application.Run(new FrmReportMedicHistory());
+            // Application.Run(new FrmReportMedicHistoryCopia());
+            // Application.Run(new FrmReporteMedicHIstoryFinal());
         }
     }
 }

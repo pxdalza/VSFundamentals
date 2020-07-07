@@ -10,18 +10,24 @@
 namespace HospitalVSFundamentals.UI.API.Models
 {
     using System;
+    using System.Data;
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     using System.Data.Entity.Core.Objects;
     using System.Linq;
-    
+    using System.Data.Common;
+
     public partial class BD_HospitalVSFundamentalsEntities : DbContext
     {
         public BD_HospitalVSFundamentalsEntities()
             : base("name=BD_HospitalVSFundamentalsEntities")
         {
         }
-    
+
+        public BD_HospitalVSFundamentalsEntities(DbConnection existingConnection, DbCompiledModel model, bool contextOwnsConnection) : base(existingConnection, model, contextOwnsConnection)
+        {
+        }
+
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             throw new UnintentionalCodeFirstException();

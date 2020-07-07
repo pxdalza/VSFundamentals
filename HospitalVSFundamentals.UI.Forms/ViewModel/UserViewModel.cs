@@ -8,7 +8,6 @@ namespace HospitalVSFundamentals.UI.Forms.ViewModel
 {
     public class UserViewModel
     {
-
         public String Id { get; set; }
 
         public string Nombre_Usuario { get; set; }
@@ -28,7 +27,7 @@ namespace HospitalVSFundamentals.UI.Forms.ViewModel
         public string Estado { get; set; }
 
         public string Genero { get; set; }
-
     }
+
 
 }

@@ -146,5 +146,15 @@ namespace HospitalVSFundamentals.UI.Forms.Forms_Specialities
 
             return speciality;
         }
+
+        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
+
+        private void dgvEspecialidades_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

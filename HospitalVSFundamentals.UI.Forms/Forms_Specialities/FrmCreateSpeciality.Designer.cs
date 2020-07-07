@@ -89,6 +89,7 @@
             this.Controls.Add(this.label1);
             this.Name = "FrmCreateSpeciality";
             this.Text = "FrmCreateSpeciality";
+            this.Load += new System.EventHandler(this.FrmCreateSpeciality_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

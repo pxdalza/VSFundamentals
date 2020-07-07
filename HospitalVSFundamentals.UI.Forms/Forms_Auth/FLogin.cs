@@ -29,7 +29,6 @@ namespace HospitalVSFundamentals.UI.Forms
 
         private void btnIngresar_Click(object sender, EventArgs e)
         {
-
             try
             {
                 UserLoginBE ulogin = new UserLoginBE();
@@ -54,12 +53,11 @@ namespace HospitalVSFundamentals.UI.Forms
                         ////redirigir al main
                         this.Hide();
                         switch (ulogin.Role)
-                        {
-                            case "ADM":
+                        {   case "ADM":
                                 var frmMainAdm = new FMainAdm();
                                 frmMainAdm.ulogin = ulogin;
                                 frmMainAdm.Show(); break;
-                            case "MDC":
+                            case "DOC":
                                 var frmMainMdc = new FMainMdc();
                                 frmMainMdc.ulogin = ulogin;
                                 frmMainMdc.Show(); break;
@@ -72,9 +70,7 @@ namespace HospitalVSFundamentals.UI.Forms
                                 break;
                         }
                     }
-
                 }
-
             }
             catch (Exception)
             {
@@ -97,5 +93,10 @@ private void llOlvidoContrasenia_LinkClicked(object sender, LinkLabelLinkClicked
     }
 
 }
+
+        private void FLogin_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

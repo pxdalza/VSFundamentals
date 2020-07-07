@@ -27,7 +27,12 @@ namespace HospitalVSFundamentals.UI.Forms.Forms_Specialities
 
             try
             {
-                var speciality = context.Speciality.Add(new Speciality {  Name = txtNombre.Text, ShortName = txtNombreCorto.Text});
+                var speciality = context.Speciality
+                    .Add(new Speciality
+                    {  Name = txtNombre.Text,
+                        ShortName = txtNombreCorto.Text
+                    }
+                    );
 
                 context.SaveChanges();
                 frmmFather.updateDGVEspecialidades();
@@ -38,6 +43,11 @@ namespace HospitalVSFundamentals.UI.Forms.Forms_Specialities
                 MessageBox.Show("Ocurrio un error en el sistema.");
 
             }
+
+        }
+
+        private void FrmCreateSpeciality_Load(object sender, EventArgs e)
+        {
 
         }
     }
